@@ -194,10 +194,12 @@ marketName = 'Total Seats - Lib Dems'
 eventTypesResult = getEventTypes()
 politicsEventTypeID = getEventTypeIDForEventTypeName(eventTypesResult, eventTypeName)
 print ('Eventype Id for "' + eventTypeName + '" is :' + str(politicsEventTypeID))
+
 # individual event
 eventsResult = getEventsForCountry(politicsEventTypeID, eventCountryCode)
 eventID = getEventIDForEventName(eventsResult, eventName)
 print('Event Id for "' + eventName + '" is :' + str(eventID))
+
 # marketCatalogue
 marketCatalogue = getMarketCatalogueForEvent(eventID)
 marketInfo = getMarketInfoForMarketName(marketCatalogue, marketName)
@@ -206,6 +208,7 @@ for marketInfoRunner in marketInfo['runners']:
     print(marketInfoRunner)
 marketID = getMarketIDForMarketName(marketCatalogue, marketName)
 print('Market Id for "' + marketName + '" is :' + str(marketID))
+
 # marketBook
 marketPrices = getMarketPrices(marketID)
 print(str(marketPrices))
