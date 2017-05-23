@@ -216,3 +216,11 @@ marketPrices = getMarketPrices(marketID)
 print(str(marketPrices))
 for marketPrice in marketPrices[0]['runners']:
     print(marketPrice)
+
+# Analysis
+for marketPrice in marketPrices[0]['runners']:
+    for back in marketPrice['ex']['availableToBack']:
+        print('bck sid:' + str(marketPrice['selectionId']) + str(back))
+    for lay in marketPrice['ex']['availableToLay']:
+        print('lay sid:' + str(marketPrice['selectionId']) + str(lay))
+
