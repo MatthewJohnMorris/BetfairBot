@@ -190,6 +190,8 @@ eventCountryCode = 'GB'
 eventName = 'UK - Next General Election'
 marketName = 'Total Seats - Lib Dems'
 
+# extra comment
+
 # event type
 eventTypesResult = getEventTypes()
 politicsEventTypeID = getEventTypeIDForEventTypeName(eventTypesResult, eventTypeName)
